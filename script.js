@@ -14,7 +14,7 @@ const toggleDarkMode = () => {
         localStorage.setItem('dark-mode', 'enabled');
         toggleButton.innerText = 'Hellen Modus aktivieren';
     } else {
-        localStorage.setItem('dark-mode', null);
+        localStorage.removeItem('dark-mode'); // Fix: Use removeItem to clear dark mode
         toggleButton.innerText = 'Dunkelmodus aktivieren';
     }
 };
